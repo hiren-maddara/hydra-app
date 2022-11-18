@@ -1,0 +1,26 @@
+{
+   "name": "hydro-app",
+   "version": "1.0.0",
+   "description": "Water resource management web app",
+   "main": "gulpfile.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/hiren-maddara/hydra-app.git"
+   },
+   "keywords": [
+      "admin",
+      "bootstrap 4",
+      "admin dashboard",
+      "admin panel",
+      "ui kit",
+      "control-panel"
+   ],
+   "author": "Hiren",
+   "license": "ISC",
+   "devDependencies": {
+      "parcel": "^2.8.0"
+   }
+}
