@@ -4,19 +4,18 @@ const route = event => {
    window.history.pushState({}, "", event.target.href);
    handleLocation();
 };
-git;
 
 async function handleLocation() {
    const path = window.location.pathname + "";
 
    const html = await fetch(path).then(data => data.text());
-   // console.log(html);
+   if (html.includes("hiren-terminate")) return;
    document.querySelector(".main-container").innerHTML = html;
 
    window.history.pushState({}, "", "/");
 }
 
-// window.onpopstate = handleLocation;
+window.onpopstate = handleLocation;
 
 document
    .querySelectorAll(".--nav-btn")
