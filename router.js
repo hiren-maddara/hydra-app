@@ -15,7 +15,7 @@ async function handleLocation() {
    window.history.pushState({}, "", "/");
 }
 
-window.onpopstate = handleLocation;
+// window.onpopstate = handleLocation;
 
 document
    .querySelectorAll(".--nav-btn")
