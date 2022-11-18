@@ -4,6 +4,7 @@ const route = event => {
    window.history.pushState({}, "", event.target.href);
    handleLocation();
 };
+git;
 
 async function handleLocation() {
    const path = window.location.pathname + "";
