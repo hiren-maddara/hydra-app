@@ -24,4 +24,6 @@ simple spa admin dashboard. Server compatible
 
 # Bugs
 
+1. some unfixed bug in navigation
+
 contact hiren.maddara@gmail.com
