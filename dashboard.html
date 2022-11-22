@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
+      <script src="./src/scripts/jquery.min.js"></script>
       <!-- Basic Page Info -->
       <meta charset="utf-8" />
       <title>Hydro App - Water Resource Management System</title>
@@ -42,24 +43,35 @@
          type="text/css"
          href="vendors/styles/icon-font.min.css"
       />
+
+      
       <link
-         rel="stylesheet"
-         type="text/css"
-         href="src/plugins/datatables/css/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+      type="text/css"
+      href="src/plugins/datatables/css/dataTables.bootstrap4.min.css"
       />
       <link
-         rel="stylesheet"
-         type="text/css"
-         href="src/plugins/datatables/css/responsive.bootstrap4.min.css"
+      rel="stylesheet"
+      type="text/css"
+      href="src/plugins/datatables/css/responsive.bootstrap4.min.css"
       />
       <link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
+      
+      <!-- for calender --> 
+
+      <link
+			rel="stylesheet"
+			type="text/css"
+			href="src/plugins/fullcalendar/fullcalendar.css"
+		/>
+
 
       <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script type="module"
+      <script
          async
          src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"
       ></script>
-      <script type="module">
+      <script>
          window.dataLayer = window.dataLayer || [];
          function gtag() {
             dataLayer.push(arguments);
@@ -82,8 +94,7 @@
          })(window, document, "script", "dataLayer", "GTM-NXZMQSS");
       </script>
       <!-- End Google Tag Manager -->
-      <!-- router script-->
-      <script defer type="module" src="./router.js"></script>
+
    </head>
    <body>
 
@@ -325,7 +336,7 @@
                      </a>
                   </li>
                   <li class="dropdown">
-                     <a href="javascript:;" class="dropdown-toggle --nav-btn">
+                     <a href="javascript:;" class="dropdown-toggle">
                         <span class="micon bi bi-table"></span
                         ><span class="mtext">Tables</span>
                      </a>
@@ -345,6 +356,7 @@
                   <li>
                      <a
                         href="/pages/calendar.html"
+                        data-script="calendar"
                         class="dropdown-toggle no-arrow --nav-btn"
                      >
                         <span class="micon bi bi-calendar4-week"></span
@@ -353,15 +365,15 @@
                   </li>
 
                   <li class="dropdown">
-                     <a href="javascript:;" class="dropdown-toggle --nav-btn">
+                     <a href="javascript:;" class="dropdown-toggle">
                         <span class="micon bi bi-pie-chart"></span
                         ><span class="mtext">Stats</span>
                      </a>
                      <ul class="submenu">
-                        <li><a href="/pages/charts/highchart.html" class="--nav-btn">Highchart</a></li>
-                        <li><a href="/pages/charts/knob-chart.html" class="--nav-btn">jQuery Knob</a></li>
-                        <li><a href="/pages/charts/jvectormap.html" class="--nav-btn">jvectormap</a></li>
-                        <li><a href="/pages/charts/apexcharts.html" class="--nav-btn">Apexcharts</a></li>
+                        <li><a href="/pages/charts/highchart.html" data-script="hc" class="--nav-btn">Highchart</a></li>
+                        <li><a href="/pages/charts/knob-chart.html" data-script="knob" class="--nav-btn">jQuery Knob</a></li>
+                        <li><a href="/pages/charts/jvectormap.html" data-script="jvec" class="--nav-btn">jvectormap</a></li>
+                        <li><a href="/pages/charts/apexcharts.html" data-script="apex" class="--nav-btn">Apexcharts</a></li>
                      </ul>
                   </li>
                      <a href="/pages/sitemap.html" class="dropdown-toggle no-arrow --nav-btn">
@@ -394,6 +406,7 @@
       <div class="mobile-menu-overlay"></div>
 
       <div class="main-container">
+         <script src="./router.js"></script>
          <div class="xs-pd-20-10 pd-ltr-20">
             <div class="title pb-20">
                <h2 class="h3 mb-0">Management Overview</h2>
@@ -1218,12 +1231,16 @@
       <script src="vendors/scripts/script.min.js"></script>
       <script src="vendors/scripts/process.js"></script>
       <script src="vendors/scripts/layout-settings.js"></script>
+
+
       <script src="src/plugins/apexcharts/apexcharts.min.js"></script>
       <script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
       <script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
       <script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
       <script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
       <script src="vendors/scripts/dashboard3.js"></script>
+
+
       <!-- Google Tag Manager (noscript) -->
       <noscript
          ><iframe
